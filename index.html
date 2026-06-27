@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>몽골어 첫걸음 가이드북</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Sans+Mongolian&display=swap');
+
+  :root {
+    --crimson: #C0392B;
+    --gold: #D4A017;
+    --deep-navy: #1A1A2E;
+    --ink: #16213E;
+    --sand: #F5F0E8;
+    --muted: #7A6F5D;
+    --border: #E0D8C8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--sand);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  /* ───── HERO ───── */
+  .hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--deep-navy);
+    padding: 60px 24px 48px;
+  }
+
+  .hero-letters {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hero-letters span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(18px, 2.8vw, 42px);
+    font-weight: 900;
+    opacity: 0;
+    animation: fadeFloat 8s ease-in-out infinite;
+    color: var(--gold);
+    letter-spacing: -0.02em;
+  }
+  .hero-letters span:nth-child(3n)   { color: var(--crimson); opacity: 0; }
+  .hero-letters span:nth-child(5n)   { color: #fff; opacity: 0; }
+  .hero-letters span:nth-child(7n)   { color: #88AACC; opacity: 0; }
+
+  @keyframes fadeFloat {
+    0%   { opacity: 0; transform: translateY(8px) scale(0.92); }
+    20%  { opacity: 0.22; transform: translateY(0) scale(1); }
+    80%  { opacity: 0.18; }
+    100% { opacity: 0; transform: translateY(-8px) scale(0.96); }
+  }
+
+  /* stagger delays */
+  .hero-letters span:nth-child(1)  { animation-delay: 0s; }
+  .hero-letters span:nth-child(2)  { animation-delay: 0.3s; }
+  .hero-letters span:nth-child(3)  { animation-delay: 0.6s; }
+  .hero-letters span:nth-child(4)  { animation-delay: 0.9s; }
+  .hero-letters span:nth-child(5)  { animation-delay: 1.2s; }
+  .hero-letters span:nth-child(6)  { animation-delay: 1.5s; }
+  .hero-letters span:nth-child(7)  { animation-delay: 1.8s; }
+  .hero-letters span:nth-child(8)  { animation-delay: 2.1s; }
+  .hero-letters span:nth-child(9)  { animation-delay: 2.4s; }
+  .hero-letters span:nth-child(10) { animation-delay: 2.7s; }
+  .hero-letters span:nth-child(11) { animation-delay: 3.0s; }
+  .hero-letters span:nth-child(12) { animation-delay: 0.15s; }
+  .hero-letters span:nth-child(13) { animation-delay: 0.45s; }
+  .hero-letters span:nth-child(14) { animation-delay: 0.75s; }
+  .hero-letters span:nth-child(15) { animation-delay: 1.05s; }
+  .hero-letters span:nth-child(16) { animation-delay: 1.35s; }
+  .hero-letters span:nth-child(17) { animation-delay: 1.65s; }
+  .hero-letters span:nth-child(18) { animation-delay: 1.95s; }
+  .hero-letters span:nth-child(19) { animation-delay: 2.25s; }
+  .hero-letters span:nth-child(20) { animation-delay: 2.55s; }
+  .hero-letters span:nth-child(21) { animation-delay: 2.85s; }
+  .hero-letters span:nth-child(22) { animation-delay: 3.15s; }
+  .hero-letters span:nth-child(23) { animation-delay: 0.2s; }
+  .hero-letters span:nth-child(24) { animation-delay: 0.5s; }
+  .hero-letters span:nth-child(25) { animation-delay: 0.8s; }
+  .hero-letters span:nth-child(26) { animation-delay: 1.1s; }
+  .hero-letters span:nth-child(27) { animation-delay: 1.4s; }
+  .hero-letters span:nth-child(28) { animation-delay: 1.7s; }
+  .hero-letters span:nth-child(29) { animation-delay: 2.0s; }
+  .hero-letters span:nth-child(30) { animation-delay: 2.3s; }
+  .hero-letters span:nth-child(31) { animation-delay: 2.6s; }
+  .hero-letters span:nth-child(32) { animation-delay: 2.9s; }
+  .hero-letters span:nth-child(33) { animation-delay: 3.2s; }
+  .hero-letters span:nth-child(34) { animation-delay: 0.4s; }
+  .hero-letters span:nth-child(35) { animation-delay: 0.7s; }
+  .hero-letters span:nth-child(36) { animation-delay: 1.0s; }
+  .hero-letters span:nth-child(37) { animation-delay: 1.3s; }
+  .hero-letters span:nth-child(38) { animation-delay: 1.6s; }
+  .hero-letters span:nth-child(39) { animation-delay: 1.9s; }
+  .hero-letters span:nth-child(40) { animation-delay: 2.2s; }
+  .hero-letters span:nth-child(41) { animation-delay: 2.5s; }
+  .hero-letters span:nth-child(42) { animation-delay: 2.8s; }
+  .hero-letters span:nth-child(43) { animation-delay: 3.1s; }
+  .hero-letters span:nth-child(44) { animation-delay: 3.4s; }
+  .hero-letters span:nth-child(45) { animation-delay: 0.25s; }
+  .hero-letters span:nth-child(46) { animation-delay: 0.55s; }
+  .hero-letters span:nth-child(47) { animation-delay: 0.85s; }
+  .hero-letters span:nth-child(48) { animation-delay: 1.15s; }
+  .hero-letters span:nth-child(49) { animation-delay: 1.45s; }
+  .hero-letters span:nth-child(50) { animation-delay: 1.75s; }
+  .hero-letters span:nth-child(51) { animation-delay: 2.05s; }
+  .hero-letters span:nth-child(52) { animation-delay: 2.35s; }
+  .hero-letters span:nth-child(53) { animation-delay: 2.65s; }
+  .hero-letters span:nth-child(54) { animation-delay: 2.95s; }
+  .hero-letters span:nth-child(55) { animation-delay: 3.25s; }
+  .hero-letters span:nth-child(56) { animation-delay: 3.55s; }
+  .hero-letters span:nth-child(57) { animation-delay: 0.35s; }
+  .hero-letters span:nth-child(58) { animation-delay: 0.65s; }
+  .hero-letters span:nth-child(59) { animation-delay: 0.95s; }
+  .hero-letters span:nth-child(60) { animation-delay: 1.25s; }
+  .hero-letters span:nth-child(61) { animation-delay: 1.55s; }
+  .hero-letters span:nth-child(62) { animation-delay: 1.85s; }
+  .hero-letters span:nth-child(63) { animation-delay: 2.15s; }
+  .hero-letters span:nth-child(64) { animation-delay: 2.45s; }
+  .hero-letters span:nth-child(65) { animation-delay: 2.75s; }
+  .hero-letters span:nth-child(66) { animation-delay: 3.05s; }
+  .hero-letters span:nth-child(67) { animation-delay: 3.35s; }
+  .hero-letters span:nth-child(68) { animation-delay: 3.65s; }
+  .hero-letters span:nth-child(69) { animation-delay: 0.1s; }
+  .hero-letters span:nth-child(70) { animation-delay: 0.4s; }
+  .hero-letters span:nth-child(71) { animation-delay: 0.7s; }
+  .hero-letters span:nth-child(72) { animation-delay: 1.0s; }
+
+  /* big decorative letters overlay */
+  .hero-deco {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: stretch;
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+  }
+  .hero-deco-char {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(60px, 8vw, 120px);
+    font-weight: 900;
+    line-height: 1;
+    opacity: 0.06;
+    color: #fff;
+    letter-spacing: -0.04em;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+  .hero-title em {
+    font-style: normal;
+    color: var(--gold);
+  }
+  .hero-sub {
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.05em;
+  }
+
+  /* ───── NAV ───── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 16px;
+    border-bottom: 2px solid var(--crimson);
+  }
+  nav a {
+    display: inline-block;
+    padding: 14px 20px;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  nav a:hover { color: var(--gold); }
+
+  /* ───── SECTION WRAPPER ───── */
+  .section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 64px 24px;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--crimson);
+    margin-bottom: 8px;
+  }
+  .section-heading {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ───── ALPHABET ───── */
+  .alpha-notice {
+    background: #FFF8E7;
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    border-radius: 0 4px 4px 0;
+  }
+  .alpha-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .alpha-cat {
+    margin-bottom: 40px;
+  }
+  .alpha-cat-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .alpha-cat-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .alpha-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 10px;
+  }
+  .alpha-card {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 10px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.12s, box-shadow 0.15s;
+    position: relative;
+    user-select: none;
+  }
+  .alpha-card:hover {
+    border-color: var(--crimson);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(192,57,43,0.12);
+  }
+  .alpha-card:active { transform: scale(0.96); }
+  .alpha-card.playing {
+    border-color: var(--gold);
+    background: #FFFBF0;
+  }
+  .alpha-char {
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .alpha-char-lower {
+    font-size: 22px;
+    color: var(--muted);
+  }
+  .alpha-roman {
+    font-size: 12px;
+    color: var(--crimson);
+    font-weight: 700;
+    margin-bottom: 3px;
+    letter-spacing: 0.03em;
+  }
+  .alpha-ko {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .alpha-play-icon {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 12px;
+    color: var(--border);
+  }
+  .alpha-card:hover .alpha-play-icon { color: var(--crimson); }
+
+  /* special categories */
+  .cat-vowel    .alpha-char { color: #1A5C9B; }
+  .cat-longvowel .alpha-char { color: #0E7D6A; }
+  .cat-dipth    .alpha-char { color: #7B3F8E; }
+  .cat-consonant .alpha-char { color: var(--ink); }
+  .cat-hard     .alpha-char { color: var(--crimson); }
+  .cat-soft     .alpha-char { color: #C07A00; }
+
+  /* ───── CONVERSATION ───── */
+  .conv-note {
+    background: #F0F4FF;
+    border-left: 3px solid #3A6ED8;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #3A4A7A;
+    margin-bottom: 32px;
+    border-radius: 0 4px 4px 0;
+  }
+  .conv-note strong { color: #1A2E70; }
+
+  .conv-section {
+    margin-bottom: 48px;
+  }
+  .conv-section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .conv-section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .conv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+  }
+  .conv-card {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.12s, box-shadow 0.15s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    user-select: none;
+  }
+  .conv-card:hover {
+    border-color: #3A6ED8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(58,110,216,0.12);
+  }
+  .conv-card:active { transform: scale(0.98); }
+  .conv-card.playing {
+    border-color: var(--gold);
+    background: #FFFBF0;
+  }
+  .conv-ko {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .conv-mn {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1A5C9B;
+    line-height: 1.4;
+  }
+  .conv-pron {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .conv-play {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--sand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+  }
+  .conv-card:hover .conv-play {
+    background: #3A6ED8;
+    color: #fff;
+  }
+
+  /* ───── NUMBERS ───── */
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+  .num-card {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, transform 0.12s;
+    user-select: none;
+  }
+  .num-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .num-card:active { transform: scale(0.96); }
+  .num-card.playing { border-color: var(--gold); background: #FFFBF0; }
+  .num-digit {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--crimson);
+    margin-bottom: 6px;
+  }
+  .num-mn {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A5C9B;
+    margin-bottom: 3px;
+  }
+  .num-pron {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* ───── FOOTER ───── */
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* ───── DIVIDER ───── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    nav { overflow-x: auto; justify-content: flex-start; }
+    .alpha-grid { grid-template-columns: repeat(4, 1fr); }
+    .conv-grid { grid-template-columns: 1fr; }
+    .numbers-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════ HERO ════════ -->
+<header class="hero" id="top">
+  <div class="hero-letters" aria-hidden="true">
+    <!-- 키릴 알파벳 반복 배치 -->
+    <span>А</span><span>Б</span><span>В</span><span>Г</span><span>Д</span><span>Е</span><span>Ё</span><span>Ж</span><span>З</span><span>И</span><span>Й</span><span>К</span>
+    <span>Л</span><span>М</span><span>Н</span><span>О</span><span>Ӧ</span><span>П</span><span>Р</span><span>С</span><span>Т</span><span>У</span><span>Ү</span><span>Ф</span>
+    <span>Х</span><span>Ц</span><span>Ч</span><span>Ш</span><span>Щ</span><span>Ъ</span><span>Ы</span><span>Ь</span><span>Э</span><span>Ю</span><span>Я</span><span>а</span>
+    <span>б</span><span>в</span><span>г</span><span>д</span><span>е</span><span>ё</span><span>ж</span><span>з</span><span>и</span><span>й</span><span>к</span><span>л</span>
+    <span>м</span><span>н</span><span>о</span><span>ӧ</span><span>п</span><span>р</span><span>с</span><span>т</span><span>у</span><span>ү</span><span>ф</span><span>х</span>
+    <span>ц</span><span>ч</span><span>ш</span><span>щ</span><span>ъ</span><span>ы</span><span>ь</span><span>э</span><span>ю</span><span>я</span><span>А</span><span>Б</span>
+  </div>
+  <div class="hero-deco" aria-hidden="true">
+    <div class="hero-deco-char">М</div>
+    <div class="hero-deco-char">О</div>
+    <div class="hero-deco-char">Н</div>
+    <div class="hero-deco-char">Г</div>
+    <div class="hero-deco-char">О</div>
+    <div class="hero-deco-char">Л</div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Монгол хэлний гарын авлага</p>
+    <h1 class="hero-title">몽골어<br><em>첫걸음</em> 가이드북</h1>
+    <p class="hero-sub">키릴 문자 · 기초 회화 · 숫자</p>
+  </div>
+</header>
+
+<!-- ════════ NAV ════════ -->
+<nav>
+  <a href="#alphabet">알파벳</a>
+  <a href="#conversation">기초 회화</a>
+  <a href="#numbers">숫자</a>
+</nav>
+
+<!-- ════════ ALPHABET ════════ -->
+<section class="section" id="alphabet">
+  <p class="section-title">II. 언어 가이드</p>
+  <h2 class="section-heading">알파벳 (키릴 문자)</h2>
+
+  <div class="alpha-notice">
+    <strong>발음 표기 안내:</strong> S = 완전 빨리 / <s>홀</s> = 가래 끓는 소리
+  </div>
+  <p class="alpha-note">카드를 클릭하면 현지 발음이 재생됩니다.</p>
+
+  <!-- 모음 -->
+  <div class="alpha-cat cat-vowel">
+    <div class="alpha-cat-title">모음 (Vowels)</div>
+    <div class="alpha-grid">
+      <div class="alpha-card" onclick="playAudio('a.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">А <span class="alpha-char-lower">а</span></div>
+        <div class="alpha-ko">아 (짧게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('E.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Э <span class="alpha-char-lower">э</span></div>
+        <div class="alpha-ko">에 (짧게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('e.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">И <span class="alpha-char-lower">и</span></div>
+        <div class="alpha-ko">이</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('O.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">О <span class="alpha-char-lower">о</span></div>
+        <div class="alpha-ko">어</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('OE.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ө <span class="alpha-char-lower">ө</span></div>
+        <div class="alpha-ko">어우</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('U.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">У <span class="alpha-char-lower">у</span></div>
+        <div class="alpha-ko">오 (짧게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('UE.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ү <span class="alpha-char-lower">ү</span></div>
+        <div class="alpha-ko">우</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 장모음 -->
+  <div class="alpha-cat cat-longvowel">
+    <div class="alpha-cat-title">장모음 (Long Vowels)</div>
+    <div class="alpha-grid">
+      <div class="alpha-card" onclick="playAudio('AA.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Аа</div>
+        <div class="alpha-ko">아— (길게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('EE.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ээ</div>
+        <div class="alpha-ko">에— (길게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('II.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ии</div>
+        <div class="alpha-ko">이— (길게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('OO.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Оо</div>
+        <div class="alpha-ko">오— (길게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('OEOE.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Өө</div>
+        <div class="alpha-ko">어— (길게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('UU.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Уу</div>
+        <div class="alpha-ko">우— (길게)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('UEUE.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Үү</div>
+        <div class="alpha-ko">으— (길게)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alpha-cat cat-dipth">
+    <div class="alpha-cat-title">보조모음</div>
+    <div class="alpha-grid">
+      <div class="alpha-card" onclick="playAudio('YE.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Е <span class="alpha-char-lower">е</span></div>
+        <div class="alpha-roman">ye</div>
+        <div class="alpha-ko">예</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('YO.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ё <span class="alpha-char-lower">ё</span></div>
+        <div class="alpha-roman">yo</div>
+        <div class="alpha-ko">요</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('YU.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ю <span class="alpha-char-lower">ю</span></div>
+        <div class="alpha-roman">yu</div>
+        <div class="alpha-ko">유</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('YA.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Я <span class="alpha-char-lower">я</span></div>
+        <div class="alpha-roman">ya</div>
+        <div class="alpha-ko">야</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('SHORT_I.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Й <span class="alpha-char-lower">й</span></div>
+        <div class="alpha-roman">j / y</div>
+        <div class="alpha-ko">짧은 이<br>(반모음)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('Y.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ы <span class="alpha-char-lower">ы</span></div>
+        <div class="alpha-ko">-의</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 자음 -->
+  <div class="alpha-cat cat-consonant">
+    <div class="alpha-cat-title">자음 (Consonants)</div>
+    <div class="alpha-grid">
+      <div class="alpha-card" onclick="playAudio('B.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Б <span class="alpha-char-lower">б</span></div>
+        <div class="alpha-roman">b</div>
+        <div class="alpha-ko">ㅂ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('V.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">В <span class="alpha-char-lower">в</span></div>
+        <div class="alpha-roman">v/w</div>
+        <div class="alpha-ko">ㅂ~ㅜ<br>(외래어)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('G.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Г <span class="alpha-char-lower">г</span></div>
+        <div class="alpha-roman">g</div>
+        <div class="alpha-ko">ㄱ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('D.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Д <span class="alpha-char-lower">д</span></div>
+        <div class="alpha-roman">d</div>
+        <div class="alpha-ko">ㄷ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('ZH.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ж <span class="alpha-char-lower">ж</span></div>
+        <div class="alpha-roman">j</div>
+        <div class="alpha-ko">ㅈ (유성음)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('Z.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">З <span class="alpha-char-lower">з</span></div>
+        <div class="alpha-roman">z</div>
+        <div class="alpha-ko">ㅈ (ㅅ+유성)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('K.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">К <span class="alpha-char-lower">к</span></div>
+        <div class="alpha-roman">k</div>
+        <div class="alpha-ko">ㄱ (외래어)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('L.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Л <span class="alpha-char-lower">л</span></div>
+        <div class="alpha-roman">l</div>
+        <div class="alpha-ko">ㄹ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('M.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">М <span class="alpha-char-lower">м</span></div>
+        <div class="alpha-roman">m</div>
+        <div class="alpha-ko">ㅁ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('N.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Н <span class="alpha-char-lower">н</span></div>
+        <div class="alpha-roman">n</div>
+        <div class="alpha-ko">ㄴ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('P.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">П <span class="alpha-char-lower">п</span></div>
+        <div class="alpha-roman">p</div>
+        <div class="alpha-ko">ㅍ (외래어)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('R.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Р <span class="alpha-char-lower">р</span></div>
+        <div class="alpha-roman">r</div>
+        <div class="alpha-ko">ㄹ (굴림)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('S.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">С <span class="alpha-char-lower">с</span></div>
+        <div class="alpha-roman">s</div>
+        <div class="alpha-ko">ㅅ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('T.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Т <span class="alpha-char-lower">т</span></div>
+        <div class="alpha-roman">t</div>
+        <div class="alpha-ko">ㅌ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('F.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ф <span class="alpha-char-lower">ф</span></div>
+        <div class="alpha-roman">f</div>
+        <div class="alpha-ko">ㅍ (외래어)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('KH.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Х <span class="alpha-char-lower">х</span></div>
+        <div class="alpha-roman">kh/h</div>
+        <div class="alpha-ko">ㅎ (가래 소리)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('TS.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ц <span class="alpha-char-lower">ц</span></div>
+        <div class="alpha-roman">ts</div>
+        <div class="alpha-ko">ㅊ (ㅅ계열)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('CH.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ч <span class="alpha-char-lower">ч</span></div>
+        <div class="alpha-roman">ch</div>
+        <div class="alpha-ko">ㅊ</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('SH.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ш <span class="alpha-char-lower">ш</span></div>
+        <div class="alpha-roman">sh</div>
+        <div class="alpha-ko">ㅅ (쉬 소리)</div>
+      </div>
+      <div class="alpha-card" onclick="playAudio('SHCH.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Щ <span class="alpha-char-lower">щ</span></div>
+        <div class="alpha-roman">shch</div>
+        <div class="alpha-ko">쒸 (외래어)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 경음부호 -->
+  <div class="alpha-cat cat-hard">
+    <div class="alpha-cat-title">경음부호 (Hard Sign)</div>
+    <div class="alpha-grid">
+      <div class="alpha-card" onclick="playAudio('HARD.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ъ <span class="alpha-char-lower">ъ</span></div>
+        <div class="alpha-roman">ʺ</div>
+        <div class="alpha-ko">경음부호<br>앞 자음을<br>분리·경화</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 연음부호 -->
+  <div class="alpha-cat cat-soft">
+    <div class="alpha-cat-title">연음부호 (Soft Sign)</div>
+    <div class="alpha-grid">
+      <div class="alpha-card" onclick="playAudio('SOFT.mp3')">
+        <span class="alpha-play-icon">▶</span>
+        <div class="alpha-char">Ь <span class="alpha-char-lower">ь</span></div>
+        <div class="alpha-roman">ʹ</div>
+        <div class="alpha-ko">연음부호<br>앞 자음을<br>구개음화</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ════════ CONVERSATION ════════ -->
+<section class="section" id="conversation">
+  <p class="section-title">II. 언어 가이드</p>
+  <h2 class="section-heading">기초 회화</h2>
+
+  <div class="conv-note">
+    <strong>발음 표기:</strong> S = 완전 빨리 / <s>홀</s> = 가래 끓는 소리 &nbsp;|&nbsp; 카드를 클릭하면 현지 발음이 재생됩니다.
+  </div>
+
+  <!-- 인사 -->
+  <div class="conv-section">
+    <div class="conv-section-title">인사 / 기본 표현</div>
+    <div class="conv-grid">
+
+      <div class="conv-card" onclick="playAudio('senbeno.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">(1) 안녕하세요</div>
+        <div class="conv-mn">Сайн байна уу</div>
+        <div class="conv-pron">센 베노</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('myname.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">제 이름은 *입니다</div>
+        <div class="conv-mn">Намайг И * гэдэг</div>
+        <div class="conv-pron">나메끄 * 기딕</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('bayarla.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">감사합니다</div>
+        <div class="conv-mn">баярлалаа</div>
+        <div class="conv-pron">바이th라</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('bayte.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">안녕히 계세요<br><small style="color:var(--muted)">(헤어지는 인사)</small></div>
+        <div class="conv-mn">баяртай</div>
+        <div class="conv-pron">바이thTE</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('yourname.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">이름이 뭐에요?</div>
+        <div class="conv-mn">чамер хэргийдэк вэ</div>
+        <div class="conv-pron">차멕 헝기득 웨</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('za.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">네</div>
+        <div class="conv-mn">За &nbsp;/&nbsp; Тийм зэ</div>
+        <div class="conv-pron">자 &nbsp;/&nbsp; 티-메</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('no.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">아니요</div>
+        <div class="conv-mn">Үгүй зэ</div>
+        <div class="conv-pron">우꾸에</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('sorry.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">(2) 미안합니다 / 실례합니다 저기요</div>
+        <div class="conv-mn">Уучлаарай</div>
+        <div class="conv-pron">오흘라레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('ok.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">괜찮습니다</div>
+        <div class="conv-mn">Зүгээр зэ</div>
+        <div class="conv-pron">주게-레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('happy.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">기쁩니다</div>
+        <div class="conv-mn">Би баяртай байна</div>
+        <div class="conv-pron">비 바이thTE 벤</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('howold.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">몇 살이세요?</div>
+        <div class="conv-mn">Та хэдэн настай вэ?</div>
+        <div class="conv-pron">타 히공 나 스타와?</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('playlgthr.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">같이 놀자</div>
+        <div class="conv-mn">хамт тaкли</div>
+        <div class="conv-pron">함트 탁리</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('lookthere.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">이거 보세요</div>
+        <div class="conv-mn">нисе хаpaле</div>
+        <div class="conv-pron">니세 하라레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('nicetomt.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">만나서 반갑습니다</div>
+        <div class="conv-mn">оhохсн байthте бен</div>
+        <div class="conv-pron">오홋스다 바이thTE 벤</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 행동 지시 -->
+  <div class="conv-section">
+    <div class="conv-section-title">행동 지시 / 이동</div>
+    <div class="conv-grid">
+
+      <div class="conv-card" onclick="playAudio('hurry.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">빨리</div>
+        <div class="conv-mn">хоTK(S)карe</div>
+        <div class="conv-pron">호특(S)카레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('getup.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">일어나세요</div>
+        <div class="conv-mn">ватсоле</div>
+        <div class="conv-pron">밧소레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('concentrate.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">집중해주세요</div>
+        <div class="conv-mn">аНгКа(홀)라레</div>
+        <div class="conv-pron">앙카(홀)라레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('follow.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">따라부르세요</div>
+        <div class="conv-mn">따갓도(홀)라레</div>
+        <div class="conv-pron">따갓도(홀)라레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('hurryup.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">서두르세요</div>
+        <div class="conv-mn">Тa яараарай</div>
+        <div class="conv-pron">타이- 라래</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('sidown.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">앉으세요</div>
+        <div class="conv-mn">소가레</div>
+        <div class="conv-pron">소가레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('eat.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">먹어요</div>
+        <div class="conv-mn">이때레</div>
+        <div class="conv-pron">이때레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('warmup.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">따라하세요</div>
+        <div class="conv-mn">따갓튀게레</div>
+        <div class="conv-pron">따갓튀게레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('followread.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">따라읽으세요</div>
+        <div class="conv-mn">따갓온사레</div>
+        <div class="conv-pron">따갓온사레</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 칭찬 / 상태 -->
+  <div class="conv-section">
+    <div class="conv-section-title">칭찬 / 상태 표현</div>
+    <div class="conv-grid">
+
+      <div class="conv-card" onclick="playAudio('workedhard.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">수고 많으셨어요</div>
+        <div class="conv-mn">Та сайн ажилласан шүү</div>
+        <div class="conv-pron">타 셍 이쩨승 슈</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('gift.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">선물이에요</div>
+        <div class="conv-mn">Энэ бэлэг шүү</div>
+        <div class="conv-pron">잉 비릭 슈</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('wait.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">잠깐만요</div>
+        <div class="conv-mn">Тур байж байгаарай</div>
+        <div class="conv-pron">투릭(S) 배쪼 배가래</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('howdoing.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">(3) 잘하고 있어요</div>
+        <div class="conv-mn">Сайн байна</div>
+        <div class="conv-pron">센- 벤</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('busy.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">바빠요</div>
+        <div class="conv-mn">завгүй</div>
+        <div class="conv-pron">자우꿔</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('vgood.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">아주 잘했어요</div>
+        <div class="conv-mn">Сайн хийлээ</div>
+        <div class="conv-pron">센 – 힐레</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('great.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">훌륭해요</div>
+        <div class="conv-mn">Гайхалтай</div>
+        <div class="conv-pron">가이힐태</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('amazing.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">대단해요</div>
+        <div class="conv-mn">Мундаг юм аа</div>
+        <div class="conv-pron">몽득 욤아</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('whatsthis.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">(4) 이건 뭐에요?</div>
+        <div class="conv-mn">Энэ юу вэ?</div>
+        <div class="conv-pron">잉 요웨?</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('korean.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">한국 사람이에요</div>
+        <div class="conv-mn">би Солонгос хүн</div>
+        <div class="conv-pron">비- 서렁쿠스(S)홍</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('delicious.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">맛있어요</div>
+        <div class="conv-mn">амттай байсан</div>
+        <div class="conv-pron">암 스태 배-승</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('callme.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">배불러요</div>
+        <div class="conv-mn">Цадчихлаа</div>
+        <div class="conv-pron">챗 치(S)홀라</div>
+      </div>
+
+      <div class="conv-card" onclick="playAudio('seeyou.mp3')">
+        <div class="conv-play">▶</div>
+        <div class="conv-ko">다음에 또 만나요</div>
+        <div class="conv-mn">따라오르(S)찌</div>
+        <div class="conv-pron">따라오르(S)찌</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ════════ NUMBERS ════════ -->
+<section class="section" id="numbers">
+  <p class="section-title">II. 언어 가이드</p>
+  <h2 class="section-heading">숫자</h2>
+
+  <div class="numbers-grid">
+    <div class="num-card" onclick="playAudio('num1.mp3')">
+      <div class="num-digit">1</div>
+      <div class="num-mn">Нэг</div>
+      <div class="num-pron">닉</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num2.mp3')">
+      <div class="num-digit">2</div>
+      <div class="num-mn">хоёр</div>
+      <div class="num-pron">허이르</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num3.mp3')">
+      <div class="num-digit">3</div>
+      <div class="num-mn">гурав</div>
+      <div class="num-pron">고-로</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num4.mp3')">
+      <div class="num-digit">4</div>
+      <div class="num-mn">дөрөв</div>
+      <div class="num-pron">두루</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num5.mp3')">
+      <div class="num-digit">5</div>
+      <div class="num-mn">тав</div>
+      <div class="num-pron">타우</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num6.mp3')">
+      <div class="num-digit">6</div>
+      <div class="num-mn">зургаа</div>
+      <div class="num-pron">조르(S)가</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num7.mp3')">
+      <div class="num-digit">7</div>
+      <div class="num-mn">долоо</div>
+      <div class="num-pron">더th어</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num8.mp3')">
+      <div class="num-digit">8</div>
+      <div class="num-mn">найм</div>
+      <div class="num-pron">내엠</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num9.mp3')">
+      <div class="num-digit">9</div>
+      <div class="num-mn">ес</div>
+      <div class="num-pron">유-스</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num10.mp3')">
+      <div class="num-digit">10</div>
+      <div class="num-mn">Арав</div>
+      <div class="num-pron">아로우(S)</div>
+    </div>
+    <div class="num-card" onclick="playAudio('num100.mp3')">
+      <div class="num-digit">100</div>
+      <div class="num-mn">Нэг зуу</div>
+      <div class="num-pron">닉조우(S)</div>
+    </div>
+    <div class="num-card" onclick="playAudio('howmuch.mp3')">
+      <div class="num-digit">얼마?</div>
+      <div class="num-mn">хэд вэ?</div>
+      <div class="num-pron">히뜨 웨?</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  몽골어 첫걸음 가이드북 &nbsp;|&nbsp; Монгол хэлний гарын авлага
+</footer>
+
+<script>
+  function playAudio(filename) {
+    const audio = new Audio('audio/' + filename);
+    audio.play().catch(() => {
+      console.log('오디오 파일을 찾을 수 없습니다: ' + filename);
+    });
+
+    // 재생 중 카드 스타일 처리
+    const card = event.currentTarget;
+    card.classList.add('playing');
+    audio.onended = () => card.classList.remove('playing');
+    audio.onerror = () => card.classList.remove('playing');
+  }
+</script>
+</body>
+</html>
